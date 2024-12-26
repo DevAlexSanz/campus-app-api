@@ -9,6 +9,9 @@ class Config {
         PORT: environmentValidator('API_PORT', 9000) as number,
         CORS_WHITELIST: process.env.CORS_WHITELIST?.split(',') || [],
       },
+      db: {
+        MONGODB_URI: environmentValidator('MONGODB_URI', '') as string,
+      },
     };
   }
 }
