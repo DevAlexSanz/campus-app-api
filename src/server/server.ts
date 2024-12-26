@@ -1,21 +1,25 @@
 import express, { Application, Request, Response, Router } from 'express';
 import cors from 'cors';
 import morgan from 'morgan';
+import { IDatabase } from '@database/database';
 import { corsWhitelistValidator } from '@utils/validators/cors-whitelist.validator';
 
 class Server {
   private app: Application;
+  private database: IDatabase;
   private port: number;
   private corsWhitelist: string[];
   private apiRoutes: Router;
 
   constructor(
     app: Application,
+    database: IDatabase,
     port: number,
     corsWhitelist: string[],
     apiRoutes: Router
   ) {
     this.app = app;
+    this.database = database;
     this.port = port;
     this.corsWhitelist = corsWhitelist;
     this.apiRoutes = apiRoutes;
@@ -47,8 +51,10 @@ class Server {
     this.app.use('/api', this.apiRoutes);
   }
 
-  public start(): void {
+  public async start(): Promise<void> {
     try {
+      await this.database.initializeDB();
+
       this.setupApiRoutes();
 
       this.app.listen(this.port, () => {
