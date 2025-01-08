@@ -1,0 +1,32 @@
+{
+  "name": "campus-app-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node build/main.js",
+    "dev": "ts-node-dev --inspect=0.0.0.0:9229 -r tsconfig-paths/register --respawn src/main.ts",
+    "build": "tsc -p tsconfig.build.json && tsc-alias -p tsconfig.build.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/bun": "1.1.15",
+    "@types/cors": "2.8.17",
+    "@types/express": "4.17.21",
+    "@types/morgan": "1.9.9",
+    "@types/node": "22.10.5",
+    "ts-node-dev": "2.0.0",
+    "tsc-alias": "1.8.10",
+    "tsconfig-paths": "4.2.0",
+    "typescript": "5.7.3"
+  },
+  "dependencies": {
+    "cors": "2.8.5",
+    "dotenv": "16.4.7",
+    "express": "4.21.2",
+    "morgan": "1.10.0"
+  }
+}
