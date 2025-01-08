@@ -8,6 +8,7 @@ import express, {
 import cors from 'cors';
 import morgan from 'morgan';
 import { corsWhitelistValidator } from '@utils/validators/cors-whitelist.validator';
+import { jsonResponse } from '@src/core/utils/helpers/json-response.helper';
 
 export const createServer = (
   app: Application,
@@ -56,8 +57,8 @@ export const createServer = (
   });
 
   app.use('/health', (_request: Request, response: Response): Response => {
-    return response.status(200).json({
-      message: 'Server is listening and running!',
+    return jsonResponse(response, {
+      message: 'Server is up and running',
       status: 200,
       success: true,
     });
