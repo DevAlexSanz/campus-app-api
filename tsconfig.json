@@ -35,6 +35,8 @@
       "@src/*": ["src/*"],
       "@core/*": ["src/core*"],
       "@config/*": ["src/core/config/*"],
+      "@decorators/*": ["src/core/decorators/*"],
+      "@middlewares/*": ["src/core/middlewares/*"],
       "@appTypes/*": ["src/core/types/*"],
       "@utils/*": ["src/core/utils/*"],
       "@routes/*": ["src/routes/*"],
