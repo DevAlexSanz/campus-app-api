@@ -4,7 +4,7 @@ import {
   ValidationArguments,
 } from 'class-validator';
 
-export const IsPrimaCUID = (validationOptions?: ValidationOptions) => {
+export const IsPrismaCUID = (validationOptions?: ValidationOptions) => {
   return (object: Object, propertyName: string) => {
     registerDecorator({
       name: 'IsPrimaCUID',
