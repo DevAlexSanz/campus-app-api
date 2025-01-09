@@ -8,7 +8,7 @@ import express, {
 import cors from 'cors';
 import morgan from 'morgan';
 import { corsWhitelistValidator } from '@utils/validators/cors-whitelist.validator';
-import { jsonResponse } from '@src/core/utils/helpers/json-response.helper';
+import { jsonResponse } from '@utils/helpers/json-response.helper';
 
 export const createServer = (
   app: Application,
