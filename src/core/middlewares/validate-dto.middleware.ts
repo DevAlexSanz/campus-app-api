@@ -26,7 +26,7 @@ export const validateDto = (dto: any, source: validationSource = 'body') => {
       }));
 
       response.status(400).json({
-        message: 'Validación fallida',
+        message: 'Validation failed',
         status: 400,
         success: false,
         errors: formattedErrors,

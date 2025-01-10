@@ -1,12 +1,18 @@
 import { Router } from 'express';
-import { createUser, getAllUsers, getUserById } from './user.controller';
 import { validateDto } from '@middlewares/validate-dto.middleware';
-import { CreateUserDto, ValidateIdDto } from './user.dto';
+import {
+  registerUser,
+  getAllUsers,
+  getUserById,
+  verifyUser,
+} from './user.controller';
+import { LoginUserDto, ValidateIdDto, VerifyUserDto } from './user.dto';
 
 const router = Router();
 
 router.get('/', getAllUsers);
 router.get('/:id', validateDto(ValidateIdDto, 'params'), getUserById);
-router.post('/', validateDto(CreateUserDto, 'body'), createUser);
+router.post('/register', validateDto(LoginUserDto, 'body'), registerUser);
+router.post('/verify-user', validateDto(VerifyUserDto, 'body'), verifyUser);
 
 export default router;
