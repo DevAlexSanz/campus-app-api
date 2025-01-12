@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SunnyBlog Account Verification</title>
+    <style>
+      body {
+        font-family: 'Roboto', Arial, sans-serif;
+        background-color: #f4f4f9;
+        margin: 0;
+        padding: 0;
+        color: #333333;
+        line-height: 1.6;
+      }
+      .email-container {
+        max-width: 600px;
+        margin: 20px auto;
+        background-color: #ffffff;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        border: 1px solid #e0e0e0;
+      }
+      .header {
+        background: linear-gradient(135deg, #ff7a18, #e52e71);
+        text-align: center;
+        padding: 20px;
+      }
+      .header h1 {
+        margin: 0;
+        font-size: 24px;
+        color: #ffffff;
+      }
+      .header span {
+        font-size: 28px;
+      }
+      .content {
+        padding: 20px 30px;
+        text-align: center;
+      }
+      .content h2 {
+        color: #ff7a18;
+        font-size: 20px;
+        margin-bottom: 15px;
+      }
+      .content p {
+        color: #555555;
+        margin-bottom: 20px;
+      }
+      .code-box {
+        background-color: #f0f0f5;
+        border: 1px dashed #ff7a18;
+        border-radius: 8px;
+        padding: 15px 20px;
+        font-size: 18px;
+        font-weight: bold;
+        color: #333333;
+        margin: 20px auto;
+        display: inline-block;
+      }
+      .footer {
+        background-color: #f4f4f9;
+        text-align: center;
+        padding: 15px;
+        font-size: 14px;
+        color: #999999;
+      }
+      .footer p {
+        margin: 0;
+      }
+      @media (max-width: 600px) {
+        .header h1 {
+          font-size: 22px;
+        }
+        .content h2 {
+          font-size: 18px;
+        }
+        .code-box {
+          font-size: 16px;
+          padding: 10px 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="email-container">
+      <div class="header">
+        <h1><span>&#9728;</span> SunnyBlog</h1>
+      </div>
+      <div class="content">
+        <h2>Hello, <span id="username"><%= username %></span>!</h2>
+        <p>Congratulations! Your account has been successfully verified.</p>
+        <p>
+          You’re now part of the SunnyBlog community, where your ideas can shine
+          bright and inspire others.
+        </p>
+        <p>
+          Start creating your first blog post and share your unique perspective
+          with the world!
+        </p>
+        <p>We can’t wait to see what you’ll create. Happy blogging!</p>
+      </div>
+      <div class="footer">
+        <p>SunnyBlog &copy; 2025. All rights reserved.</p>
+      </div>
+    </div>
+  </body>
+</html>

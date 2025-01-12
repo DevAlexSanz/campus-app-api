@@ -1,5 +1,5 @@
 {
-  "name": "campus-app-api",
+  "name": "sunny-app-api",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -29,6 +29,8 @@
   },
   "dependencies": {
     "@prisma/client": "6.2.1",
+    "@types/bcryptjs": "^2.4.6",
+    "bcryptjs": "^2.4.3",
     "class-transformer": "0.5.1",
     "class-validator": "0.14.1",
     "cors": "2.8.5",

@@ -1,1 +1,1 @@
-# campus-app-api
+# sunny-app-api
